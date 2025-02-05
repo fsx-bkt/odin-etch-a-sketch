@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    box-sizing: border-box;
+    flex-basis: 6.25%;
+    height: 100px;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20%;
+}
