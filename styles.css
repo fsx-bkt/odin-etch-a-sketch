@@ -15,7 +15,6 @@ body{
 .square{
     box-sizing: border-box;
     background-color: white;
-    flex-basis: 6.25%;
     aspect-ratio: 1;
     border: black;
     border-width: 1px;
