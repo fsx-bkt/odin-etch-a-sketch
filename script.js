@@ -5,8 +5,11 @@
 changeGridButton.addEventListener("click", changeGridSize);
 
 function changeGridSize(){
-    let newGridSize = prompt("Enter new number of squares per side:");
-    if (!Number.isInteger(newGridSize) && newGridSize <= 0 && newGridSize > 100){
+    let newGridSize = Number(prompt("Enter new number of squares per side:"));
+    if (!newGridSize ||
+         !Number.isInteger(newGridSize) ||
+          newGridSize < 1 ||
+           newGridSize > 100){
         alert("Please enter a number between 1 - 100!");
         return;
     }
