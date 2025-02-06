@@ -27,9 +27,22 @@ function makeSquareGrid(gridSize){
         let square = document.createElement("div");
         square.setAttribute("class", "square");
         square.style.flexBasis = flexBasisModifier;
+        square.addEventListener("mouseover", setRandomRGBColour);
+        square.addEventListener("mouseout", () => {
+            square.style.transition = "background-color 1500ms"
+            square.style.backgroundColor = "white";
+        });
         squareContainer.appendChild(square);
         counter++;
     }
 }
 
+function setRandomRGBColour(){
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+
+    //this.style.transitionDuration = '0ms';
+    this.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+}
 makeSquareGrid(defaultGridSize);

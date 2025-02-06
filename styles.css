@@ -14,15 +14,8 @@ body{
 
 .square{
     box-sizing: border-box;
-    background-color: white;
     aspect-ratio: 1;
     border: black;
     border-width: 1px;
     border-style: solid;
-    transition: background-color 1000ms;
-}
-
-.square:hover{
-    background-color: teal;
-    transition-duration: 0ms;
 }
